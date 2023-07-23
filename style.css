@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Della+Respira&family=Princess+Sofia&display=swap');
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+*{
+    margin:0;
+    padding:0px;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  body{
+    /* background-color:#eea2c1; */
+    margin:0px;
+    padding:0px;
+    overflow-x:hidden ;
+  }
+  .max-width{
+    max-width: 1300px;
+    padding:0 80px;
+    margin: auto;
+  }
+  /*navbar*/
+  nav{
+  display: flex;
+  background-color: #ffcccc;
+  justify-content: space-around;
+  font-family:'Della Respira', serif;
+  padding: 20px 0;
+  color: #764c73;
+  }
+
+  nav .logo img{
+    width: 100px;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+  }
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  nav ul li a{
+    color:#7a1f3d;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover{
+    color: #f887a8;
+  }
+  nav .sticky ul li a:hover{
+    color:#7a1f3d;   
+  }
+  /*Hamburger*/
+.panekuk{
+    color:#7a1f3d;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+  }
+  .panekuk input{
+    position:absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .panekuk span{
+   display: block;
+   width: 28px;
+   height: 3px;
+   background-color: #7a1f3d;
+   border-radius: 3px;
+   transition: all 0.5s;
+  }
+  .panekuk span:nth-child(2){
+    transform-origin:  0 0;
+  }
+  .panekuk span:nth-child(4){
+    transform-origin:  0 100%;
+  }
+  .panekuk input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+  }
+  .panekuk input:checked ~ span:nth-child(3){
+    transform: scale(0);
+  }
+  .panekuk input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+  }
+
+
+  /* Home */
+.home {
+  display: flex;
+  background-color:  #f887a8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color:#7a1f3d;
+  min-height: 500px;
+  font-family:'Della Respira', serif;
+}
+.home .max-width{
+  margin: auto 0 auto 40px;
+}
+.text-1{
+    font-size: 70px;
+    color: #4d0000;
+    margin-bottom: 20px;
+}
+span{
+    color: #7a1f3d;
+}
+.home-content h1{
+    color: #4d0000;
+    line-height: 60px;
+    font-size: 50px;
+}
+.home-content p{
+    color: #4d0000;
+    line-height: 22px;
+    font-size: 25px;
+}
+.images-home{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images-home img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+
+/*same*/
+.about, .interest, .contact{
+    font-family: 'Della Respira', serif; 
+  }
+  
+  .about .about-content,
+  .contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  section .judul {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight:500;
+    margin-bottom:60px;
+    padding-bottom: 20px;
+    font-family: 'Della Respira', serif;
+    color:#7a1f3d; 
+  }
+  
+  section .judul::before{
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    height: 3px;
+    width: 180px;
+    background-color:#7a1f3d;
+    transform: translateX(-50%);
+  }
+  section .judul::after{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    font-size: 20px;
+    color:#7a1f3d;
+    background-color:#ffb3b3;
+    transform: translateX(-50%);
+  }
+
+  /* About */
+  section{
+    padding: 100px  0;
+    background-color: #ffcccc;
+  }
+  
+  
+  .about .about-content .column{
+    width: 50%;
+  }
+  
+  .about .judul::after{
+    content: "Della Zulva";
+  }
+  
+  .about .about-content
+  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+  }
+  
+  .about .about-content .left{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-content .left img{
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 6px;
+
+  }
+  .about .about-content .right{
+    width: 55%;
+  }
+  .about .about-content .right .text{
+    color:#4d0000;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .about .about-content .right p{
+    text-align: justify;
+    font-size: 25px;
+  }
+  .about .about-content .right a{
+    display: inline-block;
+    background-color: #ffb3b3;
+    color: #7a1f3d;
+    font-size: 20px;
+    font-weight:500;
+    padding: 1px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #7a1f3d;
+    transition: all 0.3s ease;
+  }
+  
+  .about .about-content .right a:hover{
+    color:#ff6666;
+    background-color:none;
+  }
+
+  /* Resume */
+  .container-resume {
+    width: 100%;
+    padding: 35px 10%;
+    background-color: #f887a8;
+  }
+  .container-resume{
+    padding-right: calc(10% - 30px);
+  }
+  main.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  .col header .tittle{
+    font-family: 'Della Respira', serif;
+    color: #764c73;
+    padding: 0px 0px 20px 30px;
+  }
+  .col .content{
+    padding: 0px 30px;
+    border-left: 2px solid #764c73;
+  }
+  .col .content .box{
+    position: relative;
+    padding: 20px;
+    border: 1px solid f887a8;
+    background-color: #ffcccc;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+  }
+  .col .content .box:hover{
+    box-shadow: 0px 3px 12px 0px #f1f1f1;
+    border: 1px solid transparent;
+  }
+  .col .content .box::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 22px);
+    background-color: #4d0000;
+    border: 2px solid white;
+  }
+  .box h4{
+    position: relative;
+    color: #764c73;
+  }
+  .box h3{
+    font-size: 19px;
+    padding: 10 px 0px 6px;
+    font-family: 'Della Respira',serif;
+    color: #764c73;
+  }
+  .box p{
+    line-height: 1.2;
+    color: #764c73;
+    font-size: 17px;
+  }
+
+/* Interest */
+  .interest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 35px;
+    background: #ffcccc;
+  }
+  .wrapper{
+    max-width: 11000px;
+    width: 100%;
+    position: relative;
+  }
+  .wrapper i{
+    height: 50px;
+    width: 50px;
+    background: #ffcccc;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    grid-auto-columns: calc((100% / 4) - 12px);
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel .card{
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #eea2c1;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carousel .card .img{
+    background: #764c73;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+  .card .img img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+  }
+  .carousel .card h2{
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 3px;
+  }
+ .carousel .card p{
+    color: #764c73;
+    font-size: 1.31rem;
+  }
+
+  /*Contact  */
+  .contact .judul::after{
+  content: "Get in Touch";
+}
+.contact{
+    background-color: #f887a8;
+    color: #764c73;
+}
+
+
+.contact .contact-content .column{
+  width:calc(50% - 30px);
+  color: #764c73;
+}
+
+.contact .contact-content{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom:10px;
+}
+
+.contact .contact-content .left p{
+  text-align: justify;
+}
+
+.contact .contact-content .left .icons{
+  margin: 10px 0;
+}
+
+.contact .contact-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-content .row .info{
+  margin-left: 30px;
+}
+
+.contact .contact-content .info .head{
+  font-size: 25px;   
+}
+
+
+/* footer */
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #eea2c1;
+    color: #764c73;
+    text-align: center;
+ }
+
+
+
+
+/* responsive media */
+/* Navbar */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+    
+}
+@media screen and (max-width: 576px) {
+    .panekuk{
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #7a1f3d;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+    nav ul.slide{
+        transform: translateX(0);
+    }
+    
+}   
+    
+  /* Resume */
+  @media(max-width: 768px) {
+    main.row{
+        grid-template-columns: 1fr;
+    }
+    .row .col:nth-child(2){
+        margin-top: 30px;
+    }
+    
+  }
+  /* Interest */
+  @media screen and (max-width: 900px){
+    .wrapper .carousel{
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  @media screen and (max-width: 600px){
+    .wrapper .carousel{
+        grid-auto-columns: 100%;
+    }
+  }
